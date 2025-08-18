@@ -1,0 +1,1 @@
+{"uuid":"0750ffee-db0c-42b4-807c-48017047d9b5","name":"desafio-automacao-teste-api","children":["e2825b6b-1c0c-43e2-a179-e0429b3ebefc"],"befores":[],"afters":[{"name":"deletarUsuario","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1755529848425,"stop":1755529849125}],"start":1755529846604,"stop":1755529849126}
