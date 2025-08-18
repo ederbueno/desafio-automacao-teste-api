@@ -14,7 +14,7 @@ import static org.hamcrest.Matchers.*;
 @Feature("Login")
 public class LoginTest extends BaseTest {
 
-    @Test(description = "Deve realizar login com sucesso")
+    @Test(groups = "cadastro", description = "Deve realizar login com sucesso")
     @Severity(SeverityLevel.BLOCKER)
     @Story("Login com credenciais válidas")
     public void deveRealizarLoginComSucesso() {
@@ -34,7 +34,7 @@ public class LoginTest extends BaseTest {
                 .body("authorization", notNullValue());
     }
 
-    @Test(description = "Deve falhar ao logar com senha incorreta")
+    @Test(groups = "cadastro", description = "Deve falhar ao logar com senha incorreta")
     @Severity(SeverityLevel.NORMAL)
     @Story("Login com credenciais inválidas")
     public void deveFalharLoginComSenhaIncorreta() {

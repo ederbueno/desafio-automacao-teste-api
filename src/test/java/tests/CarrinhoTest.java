@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.*;
 @Feature("Criação e Listagem")
 public class CarrinhoTest extends BaseTest {
 
-    @Test(description = "Deve criar carrinho com produto")
+    @Test(groups = "cadastro",description = "Deve criar carrinho com produto")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Adicionar produto ao carrinho")
     public void deveCriarCarrinhoComProduto() {
@@ -40,7 +40,7 @@ public class CarrinhoTest extends BaseTest {
                 .body("message", containsString("Cadastro realizado com sucesso"));
     }
 
-    @Test(description = "Deve listar carrinhos existentes")
+    @Test(groups = "cadastro", description = "Deve listar carrinhos existentes")
     @Severity(SeverityLevel.MINOR)
     @Story("Listar carrinhos")
     public void deveListarCarrinhos() {

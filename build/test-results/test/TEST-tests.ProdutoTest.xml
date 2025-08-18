@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.ProdutoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-18T19:04:51" hostname="DESKTOP-7EKDEIT" time="2.758">
+  <properties/>
+  <testcase name="deveCriarProdutoComSucesso" classname="tests.ProdutoTest" time="1.312"/>
+  <testcase name="deveListarProdutos" classname="tests.ProdutoTest" time="0.371"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	https://serverest.dev/usuarios
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nome": "Usuário Teste",
+    "email": "teste_f705b977-d28e-4b4b-beba-bf8d67100108@email.com",
+    "password": "123456",
+    "administrador": "true"
+}
+Request method:	GET
+Request URI:	https://serverest.dev/usuarios/ddDuFqLFYTA9AjcO
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	GET
+Request URI:	https://serverest.dev/usuarios/ddDuFqLFYTA9AjcO
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	DELETE
+Request URI:	https://serverest.dev/usuarios/io.restassured.internal.RestAssuredResponseImpl%4046d2be66
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	POST
+Request URI:	https://serverest.dev/usuarios
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nome": "Usuário Teste",
+    "email": "teste_fd2e8fe2-2245-4a52-92c7-34d9c35aba56@email.com",
+    "password": "123456",
+    "administrador": "true"
+}
+Request method:	GET
+Request URI:	https://serverest.dev/usuarios/KtCsxAyLVYvS6wHD
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+Request method:	DELETE
+Request URI:	https://serverest.dev/usuarios/io.restassured.internal.RestAssuredResponseImpl%4053741683
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -22,4 +22,23 @@ public class UsuarioFactory {
         usuario.setAdministrador("false");
         return usuario;
     }
+
+    public static UsuarioDTO usuarioExistente(String email) {
+        UsuarioDTO usuario = new UsuarioDTO();
+        usuario.setNome("Usuário Teste");
+        usuario.setEmail(email);
+        usuario.setPassword("123456");
+        usuario.setAdministrador("true");
+        return usuario;
+    }
+
+    public static UsuarioDTO usuarioAlterado(){
+        UsuarioDTO usuario = new UsuarioDTO();
+        usuario.setNome("Usuarioalterado");
+        usuario.setEmail("teste_" + UUID.randomUUID() + "@email.com");
+        usuario.setPassword("654321");
+        usuario.setAdministrador("true");
+        return usuario;
+    }
+
 }

@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 @Feature("Cadastro e Listagem")
 public class ProdutoTest extends BaseTest {
 
-    @Test(description = "Deve criar produto com sucesso")
+    @Test(groups = "cadastro", description = "Deve criar produto com sucesso")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Cadastrar novo produto")
     public void deveCriarProdutoComSucesso() {
@@ -36,7 +36,7 @@ public class ProdutoTest extends BaseTest {
                 .body("message", equalTo("Cadastro realizado com sucesso"));
     }
 
-    @Test(description = "Deve listar produtos disponíveis")
+    @Test(groups = "cadastro", description = "Deve listar produtos disponíveis")
     @Severity(SeverityLevel.MINOR)
     @Story("Listar todos os produtos")
     public void deveListarProdutos() {
