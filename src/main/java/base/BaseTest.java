@@ -7,13 +7,10 @@ import factories.UsuarioFactory;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 
 public class BaseTest {
-
 
 
     protected Response usuarioCriado;
@@ -33,12 +30,12 @@ public class BaseTest {
 
     }
 
+
     @AfterMethod
     public void tearDown(){
         if(usuarioCriado != null){
         Response buscarUsuarioPorId = UsuarioClient
                 .listarUsuarios(usuarioCriado.jsonPath().getString("_id"));
-
         UsuarioClient.deletarUsuario(String.valueOf(buscarUsuarioPorId));
          }
     }

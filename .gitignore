@@ -1,0 +1,39 @@
+# Diretórios de build do Gradle
+.gradle/
+build/
+
+# Arquivos gerados pelo Gradle
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+
+# IDEs
+# IntelliJ
+.idea/
+*.iml
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Arquivos temporários e de sistema
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Relatórios de testes
+allure-results/
+allure-report/
+test-output/
+surefire-reports/
+
+# Arquivos de ambiente
+.env
+*.local
