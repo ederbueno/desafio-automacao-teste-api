@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.ProdutoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-18T12:54:29" hostname="DESKTOP-7EKDEIT" time="1.425">
-  <properties/>
-  <testcase name="deveCriarProdutoComSucesso" classname="tests.ProdutoTest" time="1.086"/>
-  <testcase name="deveListarProdutos" classname="tests.ProdutoTest" time="0.338"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

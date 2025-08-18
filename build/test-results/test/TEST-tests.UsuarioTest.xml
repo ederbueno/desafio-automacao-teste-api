@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tests.UsuarioTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-08-18T12:54:30" hostname="DESKTOP-7EKDEIT" time="0.342">
+<testsuite name="tests.UsuarioTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-08-18T15:55:57" hostname="DESKTOP-7EKDEIT" time="0.558">
   <properties/>
-  <testcase name="deveCriarUsuarioComSucesso" classname="tests.UsuarioTest" time="0.008"/>
-  <testcase name="deveFalharAoCriarUsuarioInvalido" classname="tests.UsuarioTest" time="0.333"/>
+  <testcase name="deveCriarUsuarioComSucesso" classname="tests.UsuarioTest" time="0.558"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
