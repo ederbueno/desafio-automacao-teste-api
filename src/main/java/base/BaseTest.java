@@ -9,6 +9,8 @@ import io.restassured.response.Response;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import static org.hamcrest.Matchers.equalTo;
+
 
 public class BaseTest {
 
@@ -20,6 +22,7 @@ public class BaseTest {
         RestAssured.baseURI = "https://serverest.dev";
     }
 
+
     @BeforeMethod(onlyForGroups = "cadastro")
     public void criarUsuario() {
         RestAssured.baseURI = "https://serverest.dev";
@@ -30,16 +33,17 @@ public class BaseTest {
 
     }
 
-
     @AfterMethod
     public void tearDown(){
         if(usuarioCriado != null){
-        Response buscarUsuarioPorId = UsuarioClient
-                .listarUsuarios(usuarioCriado.jsonPath().getString("_id"));
-        UsuarioClient.deletarUsuario(String.valueOf(buscarUsuarioPorId));
+         Response response = UsuarioClient
+                    .deletarUsuario(usuarioCriado.jsonPath().getString("_id"));
+            response.then()
+                    .log().all()
+                    .statusCode(200)
+                    .body("message", equalTo("Registro excluído com sucesso"));
          }
     }
-
 }
 
 

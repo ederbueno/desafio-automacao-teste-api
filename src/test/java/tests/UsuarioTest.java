@@ -87,7 +87,7 @@ public class UsuarioTest extends BaseTest {
     )
     @Severity(SeverityLevel.MINOR)
     @Story("Listar usuários cadastrados")
-    public void deveListarUsuariosCadastradosIdInexistente(String idInvalido) {
+    public void deveTentarListarUsuariosCadastradosIdInexistente(String idInvalido) {
         Response response = UsuarioClient.listarUsuarios(idInvalido);
         response.then()
                 .log().all()
@@ -104,10 +104,13 @@ public class UsuarioTest extends BaseTest {
                 )));
     }
 
-    @Test(groups = "cadastro", description = "Deve deletar usuário com sucesso")
+    @Test(groups = "busca", description = "Deve deletar usuário com sucesso")
     @Severity(SeverityLevel.NORMAL)
     @Story("Deletar usuário válido")
     public void deveDeletarUsuarioComSucesso() {
+
+        UsuarioDTO usuario = UsuarioFactory.usuarioValido();
+        Response usuarioCriado = UsuarioClient.criarUsuario(usuario);
 
         usuarioCriado.then()
                 .statusCode(201)

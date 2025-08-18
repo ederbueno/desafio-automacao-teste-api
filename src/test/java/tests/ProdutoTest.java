@@ -23,14 +23,12 @@ public class ProdutoTest extends BaseTest {
 
         Response buscarUsuarioPorId = UsuarioClient
                 .listarUsuarios(usuarioCriado.jsonPath().getString("_id"));
-
         String token = TokenUtils
                 .gerarToken(buscarUsuarioPorId.jsonPath().getString("email"),
                         buscarUsuarioPorId.jsonPath().getString("password"));
+
         ProdutoDTO produto = ProdutoFactory.produtoValido();
-
         Response response = ProdutoClient.criarProduto(produto, token);
-
         response.then()
                 .statusCode(201)
                 .body("message", equalTo("Cadastro realizado com sucesso"));
@@ -45,4 +43,32 @@ public class ProdutoTest extends BaseTest {
                 .statusCode(200)
                 .body("quantidade", greaterThan(0));
     }
+
+    @Test(groups = "cadastro", description = "Deve buscar produto por ID com sucesso")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Buscar produto por ID")
+    public void deveBuscarProdutoPorIdComSucesso() {
+
+
+        Response buscarUsuarioPorId = UsuarioClient
+                .listarUsuarios(usuarioCriado.jsonPath().getString("_id"));
+        String token = TokenUtils
+                .gerarToken(buscarUsuarioPorId.jsonPath().getString("email"),
+                        buscarUsuarioPorId.jsonPath().getString("password"));
+
+        ProdutoDTO novoProduto = ProdutoFactory.produtoValido();
+        Response produtoCriado = ProdutoClient.criarProduto(novoProduto, token);
+        String id = produtoCriado.jsonPath().getString("_id");
+
+
+        Response response = ProdutoClient.buscarProdutoPorId(id);
+
+              response.then()
+                .log().all()
+                .statusCode(200)
+                .body("_id", equalTo(id))
+                .body("nome", equalTo(novoProduto.getNome()));
+    }
+
+
 }
