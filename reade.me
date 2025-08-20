@@ -1,0 +1,68 @@
+# 🧪 Desafio de Automação de Testes de API
+
+Este projeto tem como objetivo realizar a automação de testes da API [ServeRest](https://serverest.dev/), simulando operações de um e-commerce. Os testes foram desenvolvidos em Java utilizando o framework TestNG, com suporte do Rest Assured para requisições HTTP e geração de relatórios com Allure.
+
+---
+
+## 📚 Sumário
+
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Estrutura do Projeto](#-estrutura-do-projeto)
+- [Instalação e Execução](#-instalação-e-execução)
+- [Relatórios de Teste](#-relatórios-de-teste)
+- [Endpoints Testados](#-endpoints-testados)
+- [Boas Práticas Adotadas](#-boas-práticas-adotadas)
+- [Integração Contínua](#-integração-contínua)
+- [Autor](#-autor)
+- [Licença](#-licença)
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Java 17** – Linguagem principal
+- **Gradle** – Gerenciador de dependências e build
+- **TestNG** – Framework de testes
+- **Rest Assured** – Biblioteca para testes de API REST
+- **Allure Report** – Geração de relatórios de testes
+- **GitHub Actions** – Pipeline de CI/CD
+- **ServeRest API** – Backend de testes
+
+---
+
+src/
+├── base/ # Classe base com configurações comuns
+├── clients/ # Camada de requisições HTTP
+├── dtos/ # Objetos de transferência de dados
+├── factories/ # Geração de dados dinâmicos para testes
+├── tests/ # Casos de teste organizados por entidade
+├── utils/ # Utilitários como geração de token
+
+
+---
+
+## 🛠️ Instalação e Execução
+
+### Pré-requisitos
+
+- Java 17+
+- Gradle instalado
+- Allure CLI (opcional para relatório local)
+
+### Passos para execução local
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/ederbueno/desafio-automacao-teste-api.git
+   cd desafio-automacao-teste-api
+
+2. Execute os testes
+  ./gradlew clean test
+
+3. Gere o relatório Allure
+  allure serve build/allure-results
+
+
+
+
+
