@@ -15,8 +15,7 @@
 - [Endpoints Testados](#-endpoints-testados)
 - [Boas Práticas Adotadas](#-boas-práticas-adotadas)
 - [Integração Contínua](#-integração-contínua)
-- [Autor](#-autor)
-- [Licença](#-licença)
+
 
 ---
 
@@ -33,11 +32,17 @@
 ---
 
 src/
+
 ├── base/ # Classe base com configurações comuns
+
 ├── clients/ # Camada de requisições HTTP
+
 ├── dtos/ # Objetos de transferência de dados
+
 ├── factories/ # Geração de dados dinâmicos para testes
+
 ├── tests/ # Casos de teste organizados por entidade
+
 ├── utils/ # Utilitários como geração de token
 
 
@@ -63,6 +68,75 @@ src/
 
 3. Gere o relatório Allure
   allure serve build/allure-results
+
+📊 Relatórios de Teste
+Os testes geram relatórios com o Allure, que incluem:
+
+   •	Status dos testes (pass/fail)
+
+   •	Tempo de execução
+
+   •	Logs e evidências
+
+   •	Histórico de execução
+
+Relatórios são gerados automaticamente na pasta build/allure-results.
+
+🔍 Endpoints Testados
+
+Usuários
+
+   •	POST /usuarios
+
+   •	GET /usuarios
+
+   •	DELETE /usuarios/{_id}
+
+
+Produtos
+
+   •	POST /produtos
+
+   •	PUT /produtos/{_id}
+
+   •	DELETE /produtos/{_id}
+
+
+Carrinhos
+
+   •	POST /carrinhos
+
+   •	GET /carrinhos/{_id}
+
+   •	DELETE /carrinhos/concluir-compra
+
+   •	DELETE /carrinhos/cancelar-compra
+
+
+✅ Boas Práticas Adotadas
+
+   •	Separação de responsabilidades: uso de camadas como clients, dtos, factories e tests
+
+   •	Reutilização de código: métodos utilitários e classes base
+
+   •	Limpeza pós-teste: exclusão de dados criados durante os testes
+
+   •	Dados dinâmicos: uso de fábricas para gerar dados únicos
+
+   •	Relatórios detalhados: integração com Allure
+
+
+🔄 Integração Contínua
+O projeto está integrado ao GitHub Actions, que executa os testes automaticamente a cada push ou pull request.
+Funcionalidades da pipeline:
+
+   •	Build e testes automatizados
+
+   •	Geração de artefatos (relatórios)
+
+   •	Validação contínua do código
+
+
 
 
 
