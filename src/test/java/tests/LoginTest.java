@@ -5,6 +5,7 @@ import clients.UsuarioClient;
 import dtos.LoginDTO;
 import clients.LoginClient;
 import io.restassured.response.Response;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import io.qameta.allure.*;
 
@@ -47,5 +48,16 @@ public class LoginTest extends BaseTest {
         response.then()
                 .statusCode(401)
                 .body("message", equalTo("Email e/ou senha inválidos"));
+    }
+
+    @AfterMethod
+    public void tearDown(){
+            Response response = UsuarioClient
+                    .deletarUsuario(usuarioCriado.jsonPath().getString("_id"));
+            response.then()
+                    .log().all()
+                    .statusCode(200)
+                    .body("message", equalTo("Registro excluído com sucesso"));
+
     }
 }

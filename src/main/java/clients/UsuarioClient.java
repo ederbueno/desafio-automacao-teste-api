@@ -2,13 +2,14 @@ package clients;
 
 
 import dtos.UsuarioDTO;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
 public class UsuarioClient {
     public static Response criarUsuario(UsuarioDTO usuario) {
         return given()
-                .contentType("application/json")
+                .contentType(ContentType.JSON)
                 .body(usuario)
                 .log().all()
                 .post("/usuarios");
@@ -36,7 +37,7 @@ public class UsuarioClient {
 
     public static Response editarUsuario(String id, UsuarioDTO usuarioAlterado) {
         return given()
-                .contentType("application/json")
+                .contentType(ContentType.JSON)
                 .body(usuarioAlterado)
                 .log().all()
                 .put("/usuarios/" + id);

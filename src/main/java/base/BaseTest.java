@@ -33,17 +33,6 @@ public class BaseTest {
 
     }
 
-    @AfterMethod
-    public void tearDown(){
-        if(usuarioCriado != null){
-         Response response = UsuarioClient
-                    .deletarUsuario(usuarioCriado.jsonPath().getString("_id"));
-            response.then()
-                    .log().all()
-                    .statusCode(200)
-                    .body("message", equalTo("Registro excluído com sucesso"));
-         }
-    }
 }
 
 

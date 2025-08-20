@@ -1,6 +1,7 @@
 package clients;
 
 import dtos.LoginDTO;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
@@ -8,7 +9,7 @@ import static io.restassured.RestAssured.given;
 public class LoginClient {
     public static Response realizarLogin(LoginDTO login) {
         return given()
-                .contentType("application/json")
+                .contentType(ContentType.JSON)
                 .body(login)
                 .post("/login");
     }
