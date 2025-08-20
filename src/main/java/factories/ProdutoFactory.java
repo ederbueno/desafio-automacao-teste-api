@@ -13,4 +13,14 @@ public class ProdutoFactory {
         produto.setQuantidade(10);
         return produto;
     }
+
+    public static ProdutoDTO produtoAtualizado() {
+        ProdutoDTO produto = new ProdutoDTO();
+        produto.setNome("Produto Atualizado " + UUID.randomUUID());
+        produto.setPreco(199);
+        produto.setDescricao("Descrição editada");
+        produto.setQuantidade(25);
+        return produto;
+    }
+
 }
